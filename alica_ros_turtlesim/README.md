@@ -37,11 +37,9 @@ Creating workspace by following steps in Ubuntu16.04 terminal.
 ```
 mkdir -p catkin_ws/src
 cd catkin_ws/src
+git clone https://github.com/rapyuta-robotics/alica.git
+git clone https://github.com/rapyuta-robotics/alica-essentials.git
 git clone https://github.com/rapyuta-robotics/alica-supplementary.git
-cd ..
-wstool init
-wstool merge src/alica-supplementary/alica_ros_turtlesim/alica_ros_turtlesim.rosinstall 
-wstool update
 
 # remove existing turtlesim files. You will reproduce these files.
 # you can jump to 8. "Build and Run" for testing application before deleting

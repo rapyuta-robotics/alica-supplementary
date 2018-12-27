@@ -12,8 +12,6 @@ ALICATurtle::ALICATurtle(ros::NodeHandle& priv_nh) {
     _pose_sub = priv_nh.subscribe("pose", 1, &ALICATurtle::pose_sub_callback, this);
     _teleport_client = priv_nh.serviceClient<TeleportAbsolute>("teleport_absolute");
 
-    // initialize attribute.
-    _current = _goal = Pose();
 }
 void ALICATurtle::teleport(float x, float y) {
     TeleportAbsolute srv;
