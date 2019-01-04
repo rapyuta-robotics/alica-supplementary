@@ -14,7 +14,7 @@
 #include <iostream>
 #include <memory>
 #include <string>
-#include <test_alica.h>
+#include <test_supplementary.h>
 #include <thread>
 #include <vector>
 

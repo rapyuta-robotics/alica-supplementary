@@ -17,7 +17,7 @@
 #include <engine/constraintmodul/Query.h>
 #include <gtest/gtest.h>
 #include <iostream>
-#include <test_alica.h>
+#include <test_supplementary.h>
 #include <thread>
 
 class AlicaGSolverPlan : public AlicaTestFixtureWithSolvers
