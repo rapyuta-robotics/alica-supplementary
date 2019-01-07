@@ -62,7 +62,7 @@ before_script:
         if ! wstool up ; then 
             sed -i -e \"s/$BRANCH/$BASE_BRANCH/g\" /travis/dependencies.rosinstall ; 
             wstool merge -a -y /travis/dependencies.rosinstall ; 
-            wstool up ; 
+            wstool up --continue-on-error ;
         fi ; 
     fi && 
     cd ~/catkin_ws && 
