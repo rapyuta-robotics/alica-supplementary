@@ -67,7 +67,7 @@ bool TransitionCondition1542881647180::evaluate(shared_ptr<RunningPlan> rp) {
 bool TransitionCondition1542881650423::evaluate(shared_ptr<RunningPlan> rp) {
     /*PROTECTED REGION ID(1542881648973) ENABLED START*/
     // transition happen if init flag is true in world model.
-    return turtlesim::ALICATurtleWorldModel::get()->get_init();
+    return turtlesim::ALICATurtleWorldModel::get()->getInit();
     /*PROTECTED REGION END*/
 }
 

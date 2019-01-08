@@ -19,8 +19,8 @@ public:
     static ALICATurtleWorldModel* get();                              // return instance
     static void init(ros::NodeHandle& nh, ros::NodeHandle& priv_nh);  // create instance
     static void del();
-    bool get_init() const { return _init_trigger; };
-    void set_init(const bool input) { _init_trigger = input; };
+    bool getInit() const { return _initTrigger; };
+    void setInit(const bool input) { _initTrigger = input; };
 
     static ALICATurtleWorldModel* instance;
     ALICATurtle turtle;
@@ -28,9 +28,9 @@ public:
 private:
     ALICATurtleWorldModel(ros::NodeHandle& nh, ros::NodeHandle& priv_nh);
     ~ALICATurtleWorldModel();
-    void init_trigger_sub_callback(const std_msgs::EmptyConstPtr& msg);  // callback of /init
-    ros::Subscriber _init_trigger_sub;                                   // user input for initialize,
-    bool _init_trigger;                                                  // become true when /init topic published
+    void initTriggerSubCallback(const std_msgs::EmptyConstPtr& msg);  // callback of /init
+    ros::Subscriber _initTriggerSub;                                   // user input for initialize,
+    bool _initTrigger;                                                  // become true when /init topic published
 };
 
 }  // namespace turtlesim

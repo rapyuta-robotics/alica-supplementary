@@ -22,15 +22,15 @@ void ALICATurtleWorldModel::del() {
 ALICATurtleWorldModel::ALICATurtleWorldModel(ros::NodeHandle& nh, ros::NodeHandle& priv_nh)
         : turtle(priv_nh) {
     // initialize publisher, subscriber and service client.
-    _init_trigger_sub = nh.subscribe("init", 1, &ALICATurtleWorldModel::init_trigger_sub_callback, this);
+    _initTriggerSub = nh.subscribe("init", 1, &ALICATurtleWorldModel::initTriggerSubCallback, this);
 
     // initialize attribute.
-    _init_trigger = false;
+    _initTrigger = false;
 }
 
 ALICATurtleWorldModel::~ALICATurtleWorldModel() {}
-void ALICATurtleWorldModel::init_trigger_sub_callback(const std_msgs::EmptyConstPtr& msg) {
-    _init_trigger = true;
+void ALICATurtleWorldModel::initTriggerSubCallback(const std_msgs::EmptyConstPtr& msg) {
+    _initTrigger = true;
 }
 
 }  // namespace turtlesim

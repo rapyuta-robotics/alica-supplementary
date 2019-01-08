@@ -26,7 +26,7 @@ void Go2RandomPosition::run(void* msg) {
 
     // teleport turtle to random place
     turtlesim::ALICATurtleWorldModel::get()->turtle.teleport(dist(engine), dist(engine));
-    turtlesim::ALICATurtleWorldModel::get()->set_init(false);
+    turtlesim::ALICATurtleWorldModel::get()->setInit(false);
     setSuccess();
 
     /*PROTECTED REGION END*/
