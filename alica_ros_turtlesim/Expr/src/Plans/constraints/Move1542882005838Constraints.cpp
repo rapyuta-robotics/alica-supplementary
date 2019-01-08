@@ -54,6 +54,13 @@ void Constraint1543284793605::getConstraint(shared_ptr<ProblemDescriptor> c, sha
         // check agent is leader
         const alica::EntryPoint* agent_entrypoint =
                 rp->getAssignment().getEntryPointOfAgent(c->getAgentVars()[i].getId());
+        if(!agent_entrypoint) {
+            // Engine doesn't guarantee consistent plan view during this function execution. A null entry
+            // point means that the plan status changed between the time this function was invoked
+            // and entry point was requested. Don't do anything now and ignore further constraints building.
+            return;
+        }
+
         const bool is_leader = agent_entrypoint->getTask()->getName() == "LeaderTask";
 
         // set range of variables
@@ -83,9 +90,16 @@ void Constraint1543284793605::getConstraint(shared_ptr<ProblemDescriptor> c, sha
             for (int j = i + 1; j < agent_num; ++j) {
                 // check agent is leader
                 // another way to check agent is Leader
-                const bool is_others_leader =
-                        rp->getAssignment().getEntryPointOfAgent(c->getAgentVars()[j].getId())->getId() ==
-                        1543227886876;
+                const alica::EntryPoint* other_agent_entrypoint =
+                        rp->getAssignment().getEntryPointOfAgent(c->getAgentVars()[j].getId());
+                if(!other_agent_entrypoint) {
+                    // Engine doesn't guarantee consistent plan view during this function execution. A null entry
+                    // point means that the plan status changed between the time this function was invoked
+                    // and entry point was requested. Don't do anything now and ignore further constraints building.
+                    return;
+                }
+
+                const bool is_others_leader = (other_agent_entrypoint->getId() == 1543227886876);
                 if (!is_others_leader) {
                     autodiff::Variable* x_other = static_cast<autodiff::Variable*>(c->getAgentVars()[j].getVars()[0]);
                     autodiff::Variable* y_other = static_cast<autodiff::Variable*>(c->getAgentVars()[j].getVars()[1]);

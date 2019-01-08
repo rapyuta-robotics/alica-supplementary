@@ -11,8 +11,8 @@ ALICATurtle::ALICATurtle(ros::NodeHandle& priv_nh) {
     _vel_pub = priv_nh.advertise<geometry_msgs::Twist>("cmd_vel", 1);
     _pose_sub = priv_nh.subscribe("pose", 1, &ALICATurtle::pose_sub_callback, this);
     _teleport_client = priv_nh.serviceClient<TeleportAbsolute>("teleport_absolute");
-
 }
+
 void ALICATurtle::teleport(float x, float y) {
     TeleportAbsolute srv;
     srv.request.x = x;
