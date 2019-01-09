@@ -15,7 +15,7 @@ You need to be familiar with following tools.
 - [catkin_tools](https://catkin-tools.readthedocs.io/en/latest/installing.html)
 
 ### 3. ALICA basics and Core concepts
-Brief explanation on ALICA core concepts. Please refere to ?? for the detailed information.
+Brief explanation on ALICA core concepts. Please refere to [ALICA](https://www.uni-kassel.de/eecs/fachgebiete/vs/research/alica.html) for the detailed information.
 ##### Plan
 Plan is state machine in tree structure. Plan can include plans and states and each states have `Behaviour`s. ALICA  assign entrypoint of the  state tree to the agent, e.g. robot based on `Role`, `Task`, `Constraints` and `Utility function`.
 ALICA  manage state transitions based on user code. The alica-plan-designer generates code strucutre and developer implement state transition logics. 
@@ -116,9 +116,9 @@ After ALICA generate code structure, developer need to modify/implement logic. I
 #### 7.1 World model
 We will explain only `base_node.cpp` which is related to ALICA. 
 ![base](https://github.com/rapyuta-robotics/alica-supplementary/raw/rr-devel/alica_ros_turtlesim/doc/base.png)
-    - Line 13: initialize World model. Since one agent has one world model, this method is class static method
-    - Line 15~19: Setting up ALICA-supplementray. ALICA supplementary is supporting class of ALICA.
-    - Line 21~31: Setting up ALICA Engine. 
+- L13: initialize World model. Since one agent has one world model, this method is class static method
+- L15~19: Setting up ALICA-supplementray. ALICA supplementary is supporting class of ALICA.
+- L21~31: Setting up ALICA Engine. 
 
 #### 7.2 Plan
 <plan name>.cpp file has "evaluate" function runs with specific frequency which is set in Alica.conf. "evaluate" function has state transition logic. constraints/<plan name>.cpp has "getConstraints" function which is used to provide constraints.
