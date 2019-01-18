@@ -8,7 +8,7 @@ if (${CMAKE_EXTRA_GENERATOR} MATCHES "Eclipse CDT4")
 endif (${CMAKE_EXTRA_GENERATOR} MATCHES "Eclipse CDT4")
 
 # Load catkin and all dependencies required for this package
-find_package(catkin REQUIRED COMPONENTS rqt_gui rqt_gui_cpp alica_msgs)
+find_package(catkin REQUIRED COMPONENTS rqt_gui rqt_gui_cpp alica_msgs alica_common_config)
 find_package(Qt5Core REQUIRED)
 get_target_property(Qt5Core_location Qt5::Core LOCATION)
 find_package(Qt5Gui REQUIRED)
