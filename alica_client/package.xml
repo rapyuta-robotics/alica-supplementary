@@ -17,6 +17,7 @@
   
   <run_depend>rqt_gui</run_depend>
   <run_depend>alica_msgs</run_depend>
+  <run_depend>alica_common_config</run_depend>
   <run_depend>rqt_gui_cpp</run_depend>
 
   <export>
