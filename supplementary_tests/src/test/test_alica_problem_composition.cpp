@@ -45,6 +45,7 @@ TEST_F(AlicaProblemCompositionTest, SimpleStaticComposition)
 
     auto queryBehaviour1 = dynamic_cast<alica::QueryBehaviour1*>((*deep->getChildren().begin())->getBasicBehaviour());
     ASSERT_NE(queryBehaviour1, nullptr);
+    queryBehaviour1->stopQueries();
     alica::VariableGrp allReps;
     queryBehaviour1->query->getUniqueVariableStore().getAllRep(allReps);
 
