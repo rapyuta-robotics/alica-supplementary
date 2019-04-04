@@ -59,10 +59,10 @@ before_script:
     if [[ -f /travis/dependencies.rosinstall ]] ; then
         sed -i -e \"s/$BASE_BRANCH/$BRANCH/g\" /travis/dependencies.rosinstall ;
         wstool merge -a -y /travis/dependencies.rosinstall ;
-        if ! wstool up --continue-on-error; then
+        if ! wstool up ; then
             sed -i -e \"s/$BRANCH/$BASE_BRANCH/g\" /travis/dependencies.rosinstall ;
             wstool merge -a -y /travis/dependencies.rosinstall ;
-            wstool up --continue-on-error ;
+            wstool up ;
         fi ; 
     fi && 
     cd ~/catkin_ws && 
