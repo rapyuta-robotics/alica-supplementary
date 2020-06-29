@@ -52,7 +52,6 @@ public:
 
 private:
     ros::NodeHandle* _rosNode;
-    ros::AsyncSpinner* _spinner;
 
     ros::Publisher _alicaEngineInfoPublisher;
     ros::Publisher _roleSwitchPublisher;

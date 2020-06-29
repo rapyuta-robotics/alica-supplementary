@@ -47,7 +47,6 @@ AlicaRosCommunication::AlicaRosCommunication(AlicaEngine* ae)
 {
     _isRunning = false;
     _rosNode = new ros::NodeHandle();
-    _spinner = new ros::AsyncSpinner(4);
 
     _allocationAuthorityInfoPublisher = _rosNode->advertise<alica_msgs::AllocationAuthorityInfo>(allocationAuthorityInfoTopic, 2);
     _allocationAuthorityInfoSubscriber =
@@ -78,11 +77,6 @@ AlicaRosCommunication::AlicaRosCommunication(AlicaEngine* ae)
 
 AlicaRosCommunication::~AlicaRosCommunication()
 {
-    if (_isRunning) {
-        _spinner->stop();
-    }
-    delete _spinner;
-
     _allocationAuthorityInfoSubscriber.shutdown();
     _roleSwitchPublisher.shutdown();
     _planTreeInfoSubscriber.shutdown();
@@ -411,12 +405,10 @@ void AlicaRosCommunication::sendLogMessage(int level, const string& message) con
 void AlicaRosCommunication::startCommunication()
 {
     _isRunning = true;
-    _spinner->start();
 }
 void AlicaRosCommunication::stopCommunication()
 {
     _isRunning = false;
-    _spinner->stop();
 }
 
 } /* namespace alicaRosProxy */
