@@ -2,14 +2,12 @@
 
 #include <engine/AlicaClock.h>
 #include <engine/AlicaEngine.h>
-#include <engine/teammanager/TeamManager.h>
-#include <essentials/Identifier.h>
 
 namespace supplementary
 {
 WorldModel::WorldModel()
         : maySendMessages(true)
-        , alicaEngine(nullptr)
+        , alicaContext(nullptr)
         , ownID(nullptr)
 {
     essentials::SystemConfig& sc = essentials::SystemConfig::getInstance();
@@ -20,26 +18,26 @@ WorldModel::~WorldModel() {}
 
 void WorldModel::init() {}
 
-bool WorldModel::setEngine(alica::AlicaEngine* ae)
+bool WorldModel::setAlicaContext(alica::AlicaContext* alicaContext)
 {
-    std::cout << "WorldModel: SetEngine called!" << std::endl;
-    if (this->alicaEngine == nullptr) {
-        this->alicaEngine = ae;
+    std::cout << "WorldModel: setAlicaContext called!" << std::endl;
+    if (this->alicaContext == nullptr) {
+        this->alicaContext = alicaContext;
         return true;
     } else {
         return false;
     }
 }
 
-alica::AlicaEngine* WorldModel::getEngine()
+alica::AlicaContext* WorldModel::getAlicaContext()
 {
-    return this->alicaEngine;
+    return this->alicaContext;
 }
 
 alica::AlicaTime WorldModel::getTime()
 {
-    if (this->alicaEngine != nullptr) {
-        return this->alicaEngine->getAlicaClock().now();
+    if (this->alicaContext != nullptr) {
+        return this->alicaContext->getAlicaClock().now();
     } else {
         return alica::AlicaTime::zero();
     }
@@ -61,7 +59,7 @@ void WorldModel::setMaySendMessages(bool maySendMessages)
 const essentials::IdentifierConstPtr WorldModel::getOwnId()
 {
     if (!this->ownID) {
-        this->ownID = this->alicaEngine->getTeamManager().getLocalAgentID();
+        this->ownID = this->alicaContext->getLocalAgentId();
     }
     return this->ownID;
 }

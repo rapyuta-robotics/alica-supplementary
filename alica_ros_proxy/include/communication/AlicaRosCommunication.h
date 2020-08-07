@@ -24,7 +24,7 @@ namespace alicaRosProxy
 class AlicaRosCommunication : public alica::IAlicaCommunication
 {
 public:
-    AlicaRosCommunication(AlicaEngine* ae);
+    AlicaRosCommunication(AlicaEngine& ae, essentials::IDManager& idManager);
     virtual ~AlicaRosCommunication();
 
     void tick();

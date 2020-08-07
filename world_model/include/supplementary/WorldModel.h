@@ -5,29 +5,29 @@
 
 namespace alica
 {
-class AlicaEngine;
-class AlicaTime;
+    class AlicaContext;
+    class AlicaTime;
 } // namespace alica
 
 namespace supplementary
 {
 
-class WorldModel
-{
-public:
-    WorldModel(); /* <-- Attention: Derived World Models should implement the singleton pattern */
-    virtual ~WorldModel();
-    virtual void init();
-    alica::AlicaTime getTime();
-    bool isMaySendMessages() const;
-    void setMaySendMessages(bool maySendMessages);
-    const essentials::IdentifierConstPtr getOwnId();
-    bool setEngine(alica::AlicaEngine* ae);
-    alica::AlicaEngine* getEngine();
+    class WorldModel
+    {
+    public:
+        WorldModel();
+        virtual ~WorldModel();
+        virtual void init();
+        alica::AlicaTime getTime();
+        bool isMaySendMessages() const;
+        void setMaySendMessages(bool maySendMessages);
+        const essentials::IdentifierConstPtr getOwnId();
+        bool setAlicaContext(alica::AlicaContext* alicaContext);
+        alica::AlicaContext* getAlicaContext();
 
-protected:
-    alica::AlicaEngine* alicaEngine;
-    bool maySendMessages;
-    essentials::IdentifierConstPtr ownID;
-};
+    protected:
+        alica::AlicaContext* alicaContext;
+        bool maySendMessages;
+        essentials::IdentifierConstPtr ownID;
+    };
 } // namespace supplementary
