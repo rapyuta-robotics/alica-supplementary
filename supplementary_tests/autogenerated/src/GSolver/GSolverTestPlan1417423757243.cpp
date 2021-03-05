@@ -5,7 +5,20 @@
 
 namespace alica
 {
-// Plan:GSolverTestPlan
+// Plan:GSolverTestPlan1417423757243
+GSolverTestPlan1417423757243::GSolverTestPlan1417423757243()
+        : DomainPlan("GSolverTestPlan1417423757243")
+{
+    /*PROTECTED REGION ID(con1417423757243) ENABLED START*/
+    // Add additional options here
+    /*PROTECTED REGION END*/
+}
+GSolverTestPlan1417423757243::~GSolverTestPlan1417423757243()
+{
+    /*PROTECTED REGION ID(dcon1417423757243) ENABLED START*/
+    // Add additional options here
+    /*PROTECTED REGION END*/
+}
 // Check of RuntimeCondition - (Name): NewRuntimeCondition, (ConditionString): , (Comment) :
 
 /**
@@ -31,4 +44,8 @@ std::shared_ptr<UtilityFunction> UtilityFunction1417423757243::getUtilityFunctio
 
     /*PROTECTED REGION END*/
 }
+
+/*PROTECTED REGION ID(methods1417423757243) ENABLED START*/
+// Add additional options here
+/*PROTECTED REGION END*/
 } // namespace alica

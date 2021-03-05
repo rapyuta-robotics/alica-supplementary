@@ -5,7 +5,20 @@
 
 namespace alica
 {
-// Plan:QueryPlan1
+// Plan:QueryPlan11479556074049
+QueryPlan11479556074049::QueryPlan11479556074049()
+        : DomainPlan("QueryPlan11479556074049")
+{
+    /*PROTECTED REGION ID(con1479556074049) ENABLED START*/
+    // Add additional options here
+    /*PROTECTED REGION END*/
+}
+QueryPlan11479556074049::~QueryPlan11479556074049()
+{
+    /*PROTECTED REGION ID(dcon1479556074049) ENABLED START*/
+    // Add additional options here
+    /*PROTECTED REGION END*/
+}
 // Check of RuntimeCondition - (Name): NewRuntimeCondition, (ConditionString): , (Comment) :
 
 /**
@@ -31,4 +44,8 @@ std::shared_ptr<UtilityFunction> UtilityFunction1479556074049::getUtilityFunctio
 
     /*PROTECTED REGION END*/
 }
+
+/*PROTECTED REGION ID(methods1479556074049) ENABLED START*/
+// Add additional options here
+/*PROTECTED REGION END*/
 } // namespace alica
