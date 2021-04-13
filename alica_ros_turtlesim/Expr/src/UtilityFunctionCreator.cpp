@@ -1,6 +1,6 @@
 #include "UtilityFunctionCreator.h"
-#include "Master1542881176278.h"
-#include "Move1542882005838.h"
+#include "Master1617617242750.h"
+#include "Move1617618120113.h"
 #include <iostream>
 
 namespace alica
@@ -10,14 +10,14 @@ UtilityFunctionCreator::~UtilityFunctionCreator() {}
 
 UtilityFunctionCreator::UtilityFunctionCreator() {}
 
-std::shared_ptr<BasicUtilityFunction> UtilityFunctionCreator::createUtility(long utilityfunctionConfId)
+std::shared_ptr<BasicUtilityFunction> UtilityFunctionCreator::createUtility(int64_t utilityfunctionConfId)
 {
     switch (utilityfunctionConfId) {
-    case 1542881176278:
-        return std::make_shared<UtilityFunction1542881176278>();
+    case 1617617242750:
+        return std::make_shared<UtilityFunction1617617242750>();
         break;
-    case 1542882005838:
-        return std::make_shared<UtilityFunction1542882005838>();
+    case 1617618120113:
+        return std::make_shared<UtilityFunction1617618120113>();
         break;
     default:
         std::cerr << "UtilityFunctionCreator: Unknown utility requested: " << utilityfunctionConfId << std::endl;

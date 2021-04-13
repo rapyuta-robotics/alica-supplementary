@@ -1,7 +1,7 @@
-#include "Behaviours/Go2RandomPosition.h"
+#include "Go2RandomPosition.h"
 #include <memory>
 
-/*PROTECTED REGION ID(inccpp1542881969548) ENABLED START*/
+/*PROTECTED REGION ID(inccpp1617618064309) ENABLED START*/
 // Add additional includes here
 #include <alica_ros_turtlesim/world_model.hpp>
 #include <random>
@@ -9,26 +9,27 @@
 
 namespace alica
 {
-/*PROTECTED REGION ID(staticVars1542881969548) ENABLED START*/
+/*PROTECTED REGION ID(staticVars1617618064309) ENABLED START*/
 // initialise static variables here
 /*PROTECTED REGION END*/
 
 Go2RandomPosition::Go2RandomPosition()
         : DomainBehaviour("Go2RandomPosition")
 {
-    /*PROTECTED REGION ID(con1542881969548) ENABLED START*/
+    /*PROTECTED REGION ID(con1617618064309) ENABLED START*/
     // Add additional options here
     /*PROTECTED REGION END*/
 }
 Go2RandomPosition::~Go2RandomPosition()
 {
-    /*PROTECTED REGION ID(dcon1542881969548) ENABLED START*/
+    /*PROTECTED REGION ID(dcon1617618064309) ENABLED START*/
     // Add additional options here
     /*PROTECTED REGION END*/
 }
 void Go2RandomPosition::run(void* msg)
 {
-    /*PROTECTED REGION ID(run1542881969548) ENABLED START*/
+    /*PROTECTED REGION ID(run1617618064309) ENABLED START*/
+    // Add additional options here
     if (isSuccess()) {
         return;
     }
@@ -42,18 +43,17 @@ void Go2RandomPosition::run(void* msg)
     turtlesim::ALICATurtleWorldModel::get()->turtle.teleport(dist(engine), dist(engine));
     turtlesim::ALICATurtleWorldModel::get()->setInit(false);
     setSuccess();
-
     /*PROTECTED REGION END*/
 }
 void Go2RandomPosition::initialiseParameters()
 {
-    /*PROTECTED REGION ID(initialiseParameters1542881969548) ENABLED START*/
+    /*PROTECTED REGION ID(initialiseParameters1617618064309) ENABLED START*/
     // Add additional options here
 
     /*PROTECTED REGION END*/
 }
-/*PROTECTED REGION ID(methods1542881969548) ENABLED START*/
-// Add additional methods here
+/*PROTECTED REGION ID(methods1617618064309) ENABLED START*/
+// Add additional options here
 /*PROTECTED REGION END*/
 
 } /* namespace alica */

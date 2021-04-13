@@ -1,6 +1,6 @@
 #include "BehaviourCreator.h"
-#include "Behaviours/Go2RandomPosition.h"
-#include "Behaviours/GoTo.h"
+#include "Go2RandomPosition.h"
+#include "GoTo.h"
 #include "engine/BasicBehaviour.h"
 
 namespace alica
@@ -10,13 +10,13 @@ BehaviourCreator::BehaviourCreator() {}
 
 BehaviourCreator::~BehaviourCreator() {}
 
-std::shared_ptr<BasicBehaviour> BehaviourCreator::createBehaviour(long behaviourId)
+std::shared_ptr<BasicBehaviour> BehaviourCreator::createBehaviour(int64_t behaviourId)
 {
     switch (behaviourId) {
-    case 1542881969548:
+    case 1617618064309:
         return std::make_shared<Go2RandomPosition>();
         break;
-    case 1544160969061:
+    case 1617618375823:
         return std::make_shared<GoTo>();
         break;
     default:

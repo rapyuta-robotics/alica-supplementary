@@ -1,8 +1,8 @@
 {
-  "id" : 1544160969061,
+  "id" : 1617618375823,
   "name" : "GoTo",
   "comment" : "",
-  "relativeDirectory" : "Behaviours",
+  "relativeDirectory" : "",
   "variables" : [ ],
   "frequency" : 30,
   "deferring" : 0,

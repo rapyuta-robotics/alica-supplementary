@@ -4,20 +4,20 @@
 #include <engine/BasicUtilityFunction.h>
 #include <engine/DefaultUtilityFunction.h>
 #include <engine/UtilityFunction.h>
-/*PROTECTED REGION ID(incl1542882005838) ENABLED START*/
-// Add inlcudes here
+/*PROTECTED REGION ID(incl1617618120113) ENABLED START*/
+// Add additional includes here
 /*PROTECTED REGION END*/
 
 namespace alica
 {
-/*PROTECTED REGION ID(meth1542882005838) ENABLED START*/
-// Add other things here
+/*PROTECTED REGION ID(meth1617618120113) ENABLED START*/
+// Add additional options here
 /*PROTECTED REGION END*/
-class UtilityFunction1542882005838 : public BasicUtilityFunction
+class UtilityFunction1617618120113 : public BasicUtilityFunction
 {
     std::shared_ptr<UtilityFunction> getUtilityFunction(Plan* plan);
 };
-class RunTimeCondition1543284793605 : public DomainCondition
+class RunTimeCondition1617618409499 : public DomainCondition
 {
     bool evaluate(std::shared_ptr<RunningPlan> rp);
 };

@@ -1,9 +1,9 @@
 #include "ConstraintCreator.h"
 
-#include "Behaviours/constraints/Go2RandomPosition1542881969548Constraints.h"
-#include "Behaviours/constraints/GoTo1544160969061Constraints.h"
-#include "constraints/Master1542881176278Constraints.h"
-#include "constraints/Move1542882005838Constraints.h"
+#include "constraints/Go2RandomPosition1617618064309Constraints.h"
+#include "constraints/GoTo1617618375823Constraints.h"
+#include "constraints/Master1617617242750Constraints.h"
+#include "constraints/Move1617618120113Constraints.h"
 
 #include <iostream>
 
@@ -14,11 +14,11 @@ ConstraintCreator::ConstraintCreator() {}
 
 ConstraintCreator::~ConstraintCreator() {}
 
-std::shared_ptr<BasicConstraint> ConstraintCreator::createConstraint(long constraintConfId)
+std::shared_ptr<BasicConstraint> ConstraintCreator::createConstraint(int64_t constraintConfId)
 {
     switch (constraintConfId) {
-    case 1543284793605:
-        return std::make_shared<Constraint1543284793605>();
+    case 1617618409499:
+        return std::make_shared<Constraint1617618409499>();
         break;
     default:
         std::cerr << "ConstraintCreator: Unknown constraint requested: " << constraintConfId << std::endl;

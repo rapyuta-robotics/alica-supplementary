@@ -1,8 +1,8 @@
 #include "ConditionCreator.h"
-#include "Behaviours/Go2RandomPosition1542881969548.h"
-#include "Behaviours/GoTo1544160969061.h"
-#include "Master1542881176278.h"
-#include "Move1542882005838.h"
+#include "Go2RandomPosition1617618064309.h"
+#include "GoTo1617618375823.h"
+#include "Master1617617242750.h"
+#include "Move1617618120113.h"
 
 namespace alica
 {
@@ -10,17 +10,17 @@ namespace alica
 ConditionCreator::ConditionCreator() {}
 ConditionCreator::~ConditionCreator() {}
 
-std::shared_ptr<BasicCondition> ConditionCreator::createConditions(long conditionConfId)
+std::shared_ptr<BasicCondition> ConditionCreator::createConditions(int64_t conditionConfId)
 {
     switch (conditionConfId) {
-    case 1542881647180:
-        return std::make_shared<PreCondition1542881647180>();
+    case 1617617417531:
+        return std::make_shared<PreCondition1617617417531>();
         break;
-    case 1542881650423:
-        return std::make_shared<PreCondition1542881650423>();
+    case 1617617440413:
+        return std::make_shared<PreCondition1617617440413>();
         break;
-    case 1543284793605:
-        return std::make_shared<RunTimeCondition1543284793605>();
+    case 1617618409499:
+        return std::make_shared<RunTimeCondition1617618409499>();
         break;
     default:
         std::cerr << "ConditionCreator: Unknown condition id requested: " << conditionConfId << std::endl;

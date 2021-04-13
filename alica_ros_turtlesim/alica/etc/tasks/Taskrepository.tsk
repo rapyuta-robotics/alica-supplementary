@@ -1,0 +1,22 @@
+{
+  "id" : 1617616177762,
+  "name" : "Taskrepository",
+  "comment" : "",
+  "relativeDirectory" : "",
+  "tasks" : [ {
+    "id" : 1617616289767,
+    "name" : "DefaultTask",
+    "comment" : "",
+    "taskRepository" : 1617616177762
+  }, {
+    "id" : 1617618271079,
+    "name" : "FollowerTask",
+    "comment" : "",
+    "taskRepository" : 1617616177762
+  }, {
+    "id" : 1617618287507,
+    "name" : "LeaderTask",
+    "comment" : "",
+    "taskRepository" : 1617616177762
+  } ]
+}
