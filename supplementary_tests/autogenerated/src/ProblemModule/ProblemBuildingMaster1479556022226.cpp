@@ -7,7 +7,7 @@ namespace alica
 {
 // Plan:ProblemBuildingMaster1479556022226
 ProblemBuildingMaster1479556022226::ProblemBuildingMaster1479556022226()
-        : DomainPlan("ProblemBuildingMaster1479556022226")
+        : DomainPlan()
 {
     /*PROTECTED REGION ID(con1479556022226) ENABLED START*/
     // Add additional options here

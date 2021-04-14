@@ -7,7 +7,7 @@ namespace alica
 {
 // Plan:VHMaster1524452721452
 VHMaster1524452721452::VHMaster1524452721452()
-        : DomainPlan("VHMaster1524452721452")
+        : DomainPlan()
 {
     /*PROTECTED REGION ID(con1524452721452) ENABLED START*/
     // Add additional options here

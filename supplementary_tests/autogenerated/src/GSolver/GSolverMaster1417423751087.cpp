@@ -7,7 +7,7 @@ namespace alica
 {
 // Plan:GSolverMaster1417423751087
 GSolverMaster1417423751087::GSolverMaster1417423751087()
-        : DomainPlan("GSolverMaster1417423751087")
+        : DomainPlan()
 {
     /*PROTECTED REGION ID(con1417423751087) ENABLED START*/
     // Add additional options here

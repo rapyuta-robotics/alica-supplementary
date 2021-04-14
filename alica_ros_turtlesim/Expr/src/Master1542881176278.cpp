@@ -8,7 +8,7 @@ namespace alica
 {
 // Plan:Master1542881176278
 Master1542881176278::Master1542881176278()
-        : DomainPlan("Master1542881176278")
+        : DomainPlan()
 {
     /*PROTECTED REGION ID(con1542881176278) ENABLED START*/
     // Add additional options here

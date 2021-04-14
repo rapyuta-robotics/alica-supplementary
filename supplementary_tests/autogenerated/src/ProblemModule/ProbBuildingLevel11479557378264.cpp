@@ -7,7 +7,7 @@ namespace alica
 {
 // Plan:ProbBuildingLevel11479557378264
 ProbBuildingLevel11479557378264::ProbBuildingLevel11479557378264()
-        : DomainPlan("ProbBuildingLevel11479557378264")
+        : DomainPlan()
 {
     /*PROTECTED REGION ID(con1479557378264) ENABLED START*/
     // Add additional options here

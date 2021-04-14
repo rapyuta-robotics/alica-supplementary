@@ -19,41 +19,41 @@ PlanCreator::PlanCreator() {}
 
 PlanCreator::~PlanCreator() {}
 
-std::shared_ptr<BasicPlan> PlanCreator::createPlan(int64_t planId)
+std::unique_ptr<BasicPlan> PlanCreator::createPlan(int64_t planId)
 {
     switch (planId) {
     case 1417423751087:
-        return std::make_shared<GSolverMaster1417423751087>();
+        return std::make_unique<GSolverMaster1417423751087>();
         break;
     case 1417423757243:
-        return std::make_shared<GSolverTestPlan1417423757243>();
+        return std::make_unique<GSolverTestPlan1417423757243>();
         break;
     case 1479556022226:
-        return std::make_shared<ProblemBuildingMaster1479556022226>();
+        return std::make_unique<ProblemBuildingMaster1479556022226>();
         break;
     case 1479556074049:
-        return std::make_shared<QueryPlan11479556074049>();
+        return std::make_unique<QueryPlan11479556074049>();
         break;
     case 1479557378264:
-        return std::make_shared<ProbBuildingLevel11479557378264>();
+        return std::make_unique<ProbBuildingLevel11479557378264>();
         break;
     case 1479557664989:
-        return std::make_shared<ProbBuildingLevel1_11479557664989>();
+        return std::make_unique<ProbBuildingLevel1_11479557664989>();
         break;
     case 1479718449392:
-        return std::make_shared<QueryPlan21479718449392>();
+        return std::make_unique<QueryPlan21479718449392>();
         break;
     case 1524452721452:
-        return std::make_shared<VHMaster1524452721452>();
+        return std::make_unique<VHMaster1524452721452>();
         break;
     case 1524452759599:
-        return std::make_shared<Lvl11524452759599>();
+        return std::make_unique<Lvl11524452759599>();
         break;
     case 1524452793378:
-        return std::make_shared<Lvl21524452793378>();
+        return std::make_unique<Lvl21524452793378>();
         break;
     case 1524452836022:
-        return std::make_shared<Lvl31524452836022>();
+        return std::make_unique<Lvl31524452836022>();
         break;
     default:
         std::cerr << "PlanCreator: Unknown plan requested: " << planId << std::endl;

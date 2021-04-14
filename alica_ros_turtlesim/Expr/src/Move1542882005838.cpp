@@ -7,7 +7,7 @@ namespace alica
 {
 // Plan:Move1542882005838
 Move1542882005838::Move1542882005838()
-        : DomainPlan("Move1542882005838")
+        : DomainPlan()
 {
     /*PROTECTED REGION ID(con1542882005838) ENABLED START*/
     // Add additional options here

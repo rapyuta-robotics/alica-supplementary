@@ -7,7 +7,7 @@ namespace alica
 {
 // Plan:Lvl31524452836022
 Lvl31524452836022::Lvl31524452836022()
-        : DomainPlan("Lvl31524452836022")
+        : DomainPlan()
 {
     /*PROTECTED REGION ID(con1524452836022) ENABLED START*/
     // Add additional options here
