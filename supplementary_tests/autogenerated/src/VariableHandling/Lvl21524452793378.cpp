@@ -5,7 +5,20 @@
 
 namespace alica
 {
-// Plan:Lvl2
+// Plan:Lvl21524452793378
+Lvl21524452793378::Lvl21524452793378()
+        : DomainPlan()
+{
+    /*PROTECTED REGION ID(con1524452793378) ENABLED START*/
+    // Add additional options here
+    /*PROTECTED REGION END*/
+}
+Lvl21524452793378::~Lvl21524452793378()
+{
+    /*PROTECTED REGION ID(dcon1524452793378) ENABLED START*/
+    // Add additional options here
+    /*PROTECTED REGION END*/
+}
 // Check of RuntimeCondition - (Name): NewRuntimeCondition, (ConditionString): Lvl2 Runtime Condition, (Comment) :
 
 /**
@@ -33,4 +46,8 @@ std::shared_ptr<UtilityFunction> UtilityFunction1524452793378::getUtilityFunctio
 
     /*PROTECTED REGION END*/
 }
+
+/*PROTECTED REGION ID(methods1524452793378) ENABLED START*/
+// Add additional options here
+/*PROTECTED REGION END*/
 } // namespace alica

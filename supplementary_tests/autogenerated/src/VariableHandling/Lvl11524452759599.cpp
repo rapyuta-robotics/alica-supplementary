@@ -6,7 +6,20 @@ bool vhStartCondition = false;
 
 namespace alica
 {
-// Plan:Lvl1
+// Plan:Lvl11524452759599
+Lvl11524452759599::Lvl11524452759599()
+        : DomainPlan()
+{
+    /*PROTECTED REGION ID(con1524452759599) ENABLED START*/
+    // Add additional options here
+    /*PROTECTED REGION END*/
+}
+Lvl11524452759599::~Lvl11524452759599()
+{
+    /*PROTECTED REGION ID(dcon1524452759599) ENABLED START*/
+    // Add additional options here
+    /*PROTECTED REGION END*/
+}
 // Check of RuntimeCondition - (Name): NewRuntimeCondition, (ConditionString): Lvl1 Runtime Condition, (Comment) :
 
 /**
@@ -45,7 +58,7 @@ std::shared_ptr<UtilityFunction> UtilityFunction1524452759599::getUtilityFunctio
  *   - NewState (1524452759600)
  *   - BeforeTrans (1524453481856)
  *
- * Variables of preconditon:
+ * Variables of precondition:
  */
 bool PreCondition1524453491764::evaluate(std::shared_ptr<RunningPlan> rp)
 {
@@ -53,4 +66,8 @@ bool PreCondition1524453491764::evaluate(std::shared_ptr<RunningPlan> rp)
     return vhStartCondition;
     /*PROTECTED REGION END*/
 }
+
+/*PROTECTED REGION ID(methods1524452759599) ENABLED START*/
+// Add additional options here
+/*PROTECTED REGION END*/
 } // namespace alica

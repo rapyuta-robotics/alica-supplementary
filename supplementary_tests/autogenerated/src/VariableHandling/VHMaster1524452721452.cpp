@@ -5,7 +5,20 @@
 
 namespace alica
 {
-// Plan:VHMaster
+// Plan:VHMaster1524452721452
+VHMaster1524452721452::VHMaster1524452721452()
+        : DomainPlan()
+{
+    /*PROTECTED REGION ID(con1524452721452) ENABLED START*/
+    // Add additional options here
+    /*PROTECTED REGION END*/
+}
+VHMaster1524452721452::~VHMaster1524452721452()
+{
+    /*PROTECTED REGION ID(dcon1524452721452) ENABLED START*/
+    // Add additional options here
+    /*PROTECTED REGION END*/
+}
 // Check of RuntimeCondition - (Name): NewRuntimeCondition, (ConditionString): VHMaster Runtime Condition, (Comment) : Unrelated Condition
 
 /**
@@ -31,4 +44,8 @@ std::shared_ptr<UtilityFunction> UtilityFunction1524452721452::getUtilityFunctio
 
     /*PROTECTED REGION END*/
 }
+
+/*PROTECTED REGION ID(methods1524452721452) ENABLED START*/
+// Add additional options here
+/*PROTECTED REGION END*/
 } // namespace alica

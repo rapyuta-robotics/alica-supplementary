@@ -5,7 +5,20 @@
 
 namespace alica
 {
-// Plan:ProblemBuildingMaster
+// Plan:ProblemBuildingMaster1479556022226
+ProblemBuildingMaster1479556022226::ProblemBuildingMaster1479556022226()
+        : DomainPlan()
+{
+    /*PROTECTED REGION ID(con1479556022226) ENABLED START*/
+    // Add additional options here
+    /*PROTECTED REGION END*/
+}
+ProblemBuildingMaster1479556022226::~ProblemBuildingMaster1479556022226()
+{
+    /*PROTECTED REGION ID(dcon1479556022226) ENABLED START*/
+    // Add additional options here
+    /*PROTECTED REGION END*/
+}
 /**
  * Task: DefaultTask  -> EntryPoint-ID: 1479556022228
  */
@@ -32,7 +45,7 @@ std::shared_ptr<UtilityFunction> UtilityFunction1479556022226::getUtilityFunctio
  *   - State1 (1479556022227)
  *   - State2 (1479557585252)
  *
- * Variables of preconditon:
+ * Variables of precondition:
  *	- PBMX (1479557337956)
  *	- PBMY (1479557345903)
  */
@@ -42,4 +55,8 @@ bool PreCondition1479557592662::evaluate(std::shared_ptr<RunningPlan> rp)
     return false;
     /*PROTECTED REGION END*/
 }
+
+/*PROTECTED REGION ID(methods1479556022226) ENABLED START*/
+// Add additional options here
+/*PROTECTED REGION END*/
 } // namespace alica

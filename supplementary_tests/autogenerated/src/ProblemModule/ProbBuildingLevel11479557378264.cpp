@@ -5,7 +5,20 @@
 
 namespace alica
 {
-// Plan:ProbBuildingLevel1
+// Plan:ProbBuildingLevel11479557378264
+ProbBuildingLevel11479557378264::ProbBuildingLevel11479557378264()
+        : DomainPlan()
+{
+    /*PROTECTED REGION ID(con1479557378264) ENABLED START*/
+    // Add additional options here
+    /*PROTECTED REGION END*/
+}
+ProbBuildingLevel11479557378264::~ProbBuildingLevel11479557378264()
+{
+    /*PROTECTED REGION ID(dcon1479557378264) ENABLED START*/
+    // Add additional options here
+    /*PROTECTED REGION END*/
+}
 /**
  * Task: DefaultTask  -> EntryPoint-ID: 1479557378266
  */
@@ -18,4 +31,8 @@ std::shared_ptr<UtilityFunction> UtilityFunction1479557378264::getUtilityFunctio
 
     /*PROTECTED REGION END*/
 }
+
+/*PROTECTED REGION ID(methods1479557378264) ENABLED START*/
+// Add additional options here
+/*PROTECTED REGION END*/
 } // namespace alica
